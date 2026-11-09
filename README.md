@@ -131,6 +131,10 @@ echo "255 0 0" > /sys/class/leds/rgb:kbd_backlight/multi_intensity
 echo 4 > /sys/class/leds/rgb:kbd_backlight/brightness
 ```
 
+## Contribuir
+
+Testou num notebook? Achou um problema? Quer liberar um modelo novo? Veja o [guia de contribuição](CONTRIBUTING.md).
+
 ## Créditos
 
 O driver é o [tuxedo-drivers](https://github.com/tuxedocomputers/tuxedo-drivers), da TUXEDO Computers (GPL-2.0). Este projeto só instala esse driver e oferece uma interface por cima dele.

@@ -1,0 +1,31 @@
+name: Problema no app ou no instalador
+description: Algo quebrou num notebook que já é suportado.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: O que aconteceu?
+      description: O que você fez, o que esperava e o que aconteceu.
+    validations:
+      required: true
+  - type: input
+    id: modelo
+    attributes:
+      label: Modelo do notebook
+    validations:
+      required: true
+  - type: input
+    id: sistema
+    attributes:
+      label: Distribuição e kernel
+      placeholder: "Ex.: Ubuntu 26.04, 7.0.0-42-generic"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Saída do terminal
+      description: Saída do instalador e de `sudo dmesg | grep -iE 'tuxedo|uniwill' | tail -20`. Para erros do app, rode `teclado-rgb` no terminal e cole o que aparecer.
+      render: text

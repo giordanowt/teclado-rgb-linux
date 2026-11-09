@@ -1,0 +1,63 @@
+name: Testei no meu notebook
+description: Conte se o Teclado RGB funcionou (ou não) no seu modelo, para entrar na tabela de testados.
+title: "[Notebook] "
+labels: ["hardware"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por testar! Com essas informações o seu modelo entra na tabela do README.
+  - type: input
+    id: modelo
+    attributes:
+      label: Modelo do notebook
+      placeholder: "Ex.: Avell A52r"
+    validations:
+      required: true
+  - type: dropdown
+    id: resultado
+    attributes:
+      label: Funcionou?
+      options:
+        - Sim, tudo funcionando
+        - Parcialmente (explique abaixo)
+        - Não funcionou
+    validations:
+      required: true
+  - type: textarea
+    id: cpu
+    attributes:
+      label: Saída de `lscpu | head -20`
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: sistema
+    attributes:
+      label: Distribuição e kernel
+      description: Saída de `cat /etc/os-release | head -1` e `uname -r`.
+      placeholder: "Ex.: Ubuntu 26.04, 7.0.0-42-generic"
+    validations:
+      required: true
+  - type: dropdown
+    id: secureboot
+    attributes:
+      label: Secure Boot
+      description: Saída de `mokutil --sb-state`.
+      options:
+        - Desligado
+        - Ligado
+        - Não sei
+    validations:
+      required: true
+  - type: textarea
+    id: saida
+    attributes:
+      label: Saída do instalador
+      description: Cole tudo o que apareceu no terminal ao rodar o `./install.sh`. Obrigatório se não funcionou.
+      render: text
+  - type: textarea
+    id: obs
+    attributes:
+      label: Observações
+      description: Teclado de uma zona ou RGB por tecla? Alguma cor ficou estranha? Qualquer detalhe ajuda.

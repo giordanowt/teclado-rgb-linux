@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar uma falha de segurança
+    url: https://github.com/giordanowt/teclado-rgb-linux/security/advisories/new
+    about: Não abra issue pública para falhas de segurança. Use o relatório privado.
